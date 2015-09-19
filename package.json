@@ -1,0 +1,22 @@
+{
+  "name": "koa-no-trailing-slash",
+  "version": "1.0.0",
+  "description": "Koa middleware that redirects all requests to an URL with a trailing slash to the same URL without it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "koa",
+    "url",
+    "redirect",
+    "trailing",
+    "slash"
+  ],
+  "author": {
+	  "name": "Tae Sandoval",
+	  "email": "tae@mylodon.cl",
+	  "url": "http://taecilla.github.io"
+  },
+  "license": "CC0-1.0"
+}
