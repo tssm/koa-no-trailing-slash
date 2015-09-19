@@ -18,5 +18,9 @@
 	  "email": "tae@mylodon.cl",
 	  "url": "http://taecilla.github.io"
   },
-  "license": "CC0-1.0"
+  "license": "CC0-1.0",
+  "repository": {
+      "type": "git",
+      "url" : "https://bitbucket.org/taecilla/koa-no-trailing-slash.git"
+  }
 }
