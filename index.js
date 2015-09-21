@@ -4,7 +4,7 @@ module.exports = function noTrailingSlash() {
 		yield next
 		if (url != '/' && /\/$/.test(url)) {
 			var trailingSlashPosition = url.length - 1
-			this.status = 301
+			this.response.status = 301
 			this.response.redirect(url.slice(0, trailingSlashPosition))
 		}
 	}
