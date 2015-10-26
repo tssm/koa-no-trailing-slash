@@ -4,7 +4,7 @@
   "description": "Koa middleware that redirects all requests to an URL with a trailing slash to the same URL without it.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node tests.js"
   },
   "keywords": [
     "koa",
@@ -14,13 +14,19 @@
     "slash"
   ],
   "author": {
-	  "name": "Tae Sandoval",
-	  "email": "tae@mylodon.cl",
-	  "url": "http://taecilla.github.io"
+    "name": "Tae Sandoval",
+    "email": "tae@mylodon.cl",
+    "url": "http://taecilla.bitbucket.org"
+  },
+  "bugs": {
+    "url": "https://bitbucket.org/taecilla/koa-no-trailing-slash/issues",
+    "email": "tae@mylodon.cl"
   },
   "license": "CC0-1.0",
-  "repository": {
-      "type": "git",
-      "url" : "https://bitbucket.org/taecilla/koa-no-trailing-slash.git"
+  "repository": "bitbucket:taecilla/koa-no-trailing-slash",
+  "devDependencies": {
+    "koa": "*",
+    "curlrequest": "*",
+    "randomstring": "*"
   }
 }
