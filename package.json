@@ -1,6 +1,6 @@
 {
   "name": "koa-no-trailing-slash",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Koa middleware that redirects all requests to an URL with a trailing slash to the same URL without it.",
   "main": "index.js",
   "scripts": {
