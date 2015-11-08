@@ -1,14 +1,26 @@
-Koa middleware that redirects all requests to an URL with a trailing slash to the same URL without it, ignoring the query string (key and value).
+Koa middleware that redirects all requests to an URL with a
+trailing slash to the same URL without it, ignoring the query
+string (key and value).
 
-## Usage
+# Installation
 
-	const app = require('koa')()
-	app.use(reuire('koa-no-trailing-slash'))
-	app.use(function *(next) {
-	   this.response.body = 'Did this URL had a trailing slash?'
-	})
-	app.listen(8000)
+    npm install koa-no-trailing-slash
 
-## Related module
+# Usage
+
+```javascript
+const app = require('koa')()
+app.use(reuire('koa-no-trailing-slash'))
+app.use(function *(next) {
+   this.response.body = 'Did this URL had a trailing slash?'
+})
+app.listen(8000)
+```
+
+# License
+
+[CC0](https://creativecommons.org/publicdomain/zero/1.0/)
+
+# Related middleware
 
 [koa-lowercase-url](https://www.npmjs.com/package/koa-lowercase-url)
