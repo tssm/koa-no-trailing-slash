@@ -9,12 +9,12 @@ string (key and value).
 # Usage
 
 ```javascript
-const app = require('koa')()
-app.use(reuire('koa-no-trailing-slash'))
+const app = new (require('koa'));
+app.use(reuire('koa-no-trailing-slash')());
 app.use(function *(next) {
-   this.response.body = 'Did this URL had a trailing slash?'
-})
-app.listen(8000)
+   this.response.body = 'Did this URL had a trailing slash?';
+});
+app.listen(8000);
 ```
 
 # License

@@ -1,15 +1,17 @@
-'use strict'
+'use strict';
 
 module.exports = function noTrailingSlash() {
-	return function *(next) {
-		const url = this.request.url
-		const querystring = this.request.querystring
-		if (!querystring && url != '/' && /\/$/.test(url)) {
-			this.response.status = 301
-			this.response.redirect(url.slice(0, url.length - 1))
-			return
+	return async function noTrailingSlash({ request, response }, next) {
+		const { origin, path, querystring } = request;
+
+		if (!querystring && path !== '/' && /\/$/.test(path)) {
+			const location = origin + path;
+
+			response.status = 301;
+			response.redirect(location.replace(/\/$/, ''));
+			return;
 		}
 
-		yield next
-	}
-}()
+		await next();
+	};
+};

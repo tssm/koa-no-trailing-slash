@@ -1,6 +1,6 @@
 {
   "name": "koa-no-trailing-slash",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Koa middleware that redirects all requests to an URL with a trailing slash to the same URL without it.",
   "main": "index.js",
   "scripts": {
@@ -13,20 +13,17 @@
     "trailing",
     "slash"
   ],
-  "author": {
-    "name": "Tae Sandoval",
-    "email": "taecilla@gmail.com",
-    "url": "https://taecilla.github.io"
-  },
-  "bugs": {
-    "url": "https://github.com/taecilla/koa-no-trailing-slash/issues",
-    "email": "taecilla@gmail.com"
-  },
-  "license": "CC0-1.0",
-  "repository": "taecilla/koa-no-trailing-slash",
-  "devDependencies": {
-    "koa": "*",
-    "curlrequest": "*",
-    "randomstring": "*"
-  }
+	"author": {
+		"name": "Tae Sandoval",
+		"email": "tssm@users.noreply.github.com",
+		"url": "https://tssm.github.io"
+	},
+	"bugs": "https://github.com/tssm/koa-no-trailing-slash/issues",
+	"license": "CC0-1.0",
+	"repository": "tssm/koa-no-trailing-slash",
+	"devDependencies": {
+		"koa": "^2.2.0",
+		"curlrequest": "^1.0.1",
+		"randomstring": "^1.1.5"
+	}
 }
