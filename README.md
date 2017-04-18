@@ -10,7 +10,7 @@ string (key and value).
 
 ```javascript
 const app = new (require('koa'));
-app.use(reuire('koa-no-trailing-slash')());
+app.use(require('koa-no-trailing-slash')());
 app.use(async (ctx, next) => {
    ctx.response.body = 'Did this URL had a trailing slash?';
 });
