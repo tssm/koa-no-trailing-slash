@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function noTrailingSlash() {
-	return async function noTrailingSlash({ request, response }, next) {
+	return function noTrailingSlash({ request, response }, next) {
 		const { origin, path, querystring } = request;
 
 		if (!querystring && path !== '/' && /\/$/.test(path)) {
@@ -12,6 +12,6 @@ module.exports = function noTrailingSlash() {
 			return;
 		}
 
-		await next();
+		return next();
 	};
 };
