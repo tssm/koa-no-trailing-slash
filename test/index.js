@@ -34,4 +34,12 @@ describe('middleware', function () {
       .expect('Location', PATH)
       .expect(301)
   })
+  it('should work with urls which have query strings and trailing slashes', function () {
+    const PATH = '/test'
+    const RAW_QUERY_STRING = '?foo=bar'
+    return request
+      .get(PATH + '/' + RAW_QUERY_STRING)
+      .expect('Location', PATH + RAW_QUERY_STRING)
+      .expect(301)
+  })
 })
