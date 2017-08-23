@@ -1,7 +1,5 @@
 /* eslint-env mocha */
 
-const assert = require('assert')
-const util = require('util')
 const Koa = require('koa')
 const supertest = require('supertest')
 const middleware = require('..')
@@ -33,11 +31,7 @@ describe('middleware', function () {
     const PATH = '/test'
     return request
       .get(PATH + '/')
+      .expect('Location', PATH)
       .expect(301)
-      .expect(function (res) {
-        const origin = util.format('%s//%s', res.request.protocol, res.request.host)
-        const pathUrl = res.get('Location').slice(origin.length)
-        assert.strictEqual(PATH, pathUrl)
-      })
   })
 })

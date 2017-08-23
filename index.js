@@ -1,17 +1,17 @@
-'use strict';
+'use strict'
 
-module.exports = function noTrailingSlash() {
-	return function noTrailingSlash({ request, response }, next) {
-		const { origin, path, querystring } = request;
+module.exports = function noTrailingSlash () {
+  return function noTrailingSlash (ctx, next) {
+    const {originalUrl, search} = ctx.request
+    const pathUrl = originalUrl.slice(0, originalUrl.length - search.length)
 
-		if (!querystring && path !== '/' && /\/$/.test(path)) {
-			const location = origin + path;
+    if (pathUrl !== '/' && pathUrl.endsWith('/')) {
+      const redirectUrl = pathUrl.slice(0, pathUrl.length - 1) + search
+      ctx.response.status = 301
+      ctx.redirect(redirectUrl)
+      return
+    }
 
-			response.status = 301;
-			response.redirect(location.replace(/\/$/, ''));
-			return;
-		}
-
-		return next();
-	};
-};
+    return next()
+  }
+}
