@@ -2,12 +2,12 @@
 
 const Koa = require('koa')
 const supertest = require('supertest')
-const middleware = require('..')
+const noTrailingSlash = require('..')
 
 describe('middleware', function () {
   const server = new Koa()
   const request = supertest(server.listen())
-  server.use(middleware())
+  server.use(noTrailingSlash())
   server.use(function (ctx) {
     ctx.status = 200
   })
