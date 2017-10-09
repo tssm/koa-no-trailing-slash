@@ -1,3 +1,5 @@
+[![ComVer](https://img.shields.io/badge/ComVer-compliant-brightgreen.svg)](https://github.com/staltz/comver)
+
 Koa middleware that redirects all requests to an URL with a
 trailing slash to the same URL without it, ignoring the query
 string (key and value).
